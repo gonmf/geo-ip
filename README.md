@@ -1,6 +1,10 @@
-Run download.sh to fetch the 3rd party geo IP files.
+# Fast Geo IP web server
 
-Start the server with start.sh.
+Run `./download.sh` to fetch the 3rd party geo IP files in CSV format.
+
+Server will need some 700MiB of memory.
+
+Start the server running `./start.sh`.
 
 Examples:
 
