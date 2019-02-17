@@ -3,7 +3,7 @@ require 'json'
 require 'sinatra'
 
 def load_names_database(lang)
-  filename = "./db/GeoLite2-City-CSV_20190212/GeoLite2-City-Locations-#{lang}.csv"
+  filename = Dir.glob("db/**/*-#{lang}.csv").first
   puts "Loading #{filename}"
 
   ret = {}
@@ -23,7 +23,7 @@ def load_names_database(lang)
 end
 
 def load_blocks_database(ip_version)
-  filename = "./db/GeoLite2-City-CSV_20190212/GeoLite2-City-Blocks-IP#{ip_version}.csv"
+  filename = Dir.glob("db/**/*#{ip_version}.csv").first
   puts "Loading #{filename}"
 
   ret = {}
